@@ -1,7 +1,7 @@
-import './App.css'
-import { Chat } from './pages/chat/chat'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from './context/ThemeContext'
+import "./App.css";
+import { Chat } from "./pages/chat/chat";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         </div>
       </Router>
     </ThemeProvider>
-  )
+  );
 }
 
 export default App;

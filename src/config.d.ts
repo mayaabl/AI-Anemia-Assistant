@@ -1,5 +1,7 @@
-declare module "@/config" {
+interface ImportMetaEnv {
+  readonly VITE_OPENAI_API_KEY: string;
+}
 
-    export const apiKey: string | undefined;
-    
-  }
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}

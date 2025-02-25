@@ -8,7 +8,6 @@ import { useState } from "react";
 import { message } from "../../interfaces/interfaces";
 import { Header } from "@/components/custom/header";
 import { v4 as uuidv4 } from "uuid";
-import { apiKey } from "@/config"; // Import API key from config
 
 export function Chat() {
   const [messagesContainerRef, messagesEndRef] =
@@ -25,6 +24,7 @@ export function Chat() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   async function handleSubmit(text?: string) {
+    const apiKey = import.meta.env.VITE_OPENAI_API_KEY; // Access API key from environment variable
     if (!apiKey || isLoading) return;
 
     const messageText = text || question;
@@ -123,4 +123,3 @@ export function Chat() {
     </div>
   );
 }
-console.log("Loaded API Key:", apiKey);
